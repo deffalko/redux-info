@@ -1,1 +1,1 @@
-# redux-info
+# redux-countries
