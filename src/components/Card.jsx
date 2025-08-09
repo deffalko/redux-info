@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ToggleSwitch from "./ToggleSwitch";
+import RemoveBtn from "../features/remove/RemoveBtn";
 
 const Wrapper = styled.article`
   border-radius: var(--radii);
@@ -49,24 +50,29 @@ const CardInfo = styled.div`
   padding: 14px 14px 0px 14px;
 `;
 
-const CardBtn = styled.button`
-  background-color: #cccccc; /* серый цвет */
-  border: none; /* убираем рамку */
-  padding: 8px 16px; /* внутренние отступы */
-  border-radius: 15px; /* чуть закруглённые углы */
-  cursor: pointer; /* курсор при наведении */
-  font-size: 14px; /* размер шрифта */
-  background-color: var(--colors-ui-base);
-  border: 0.1px solid white;
-  color: white;
-  margin: 10px 0px 10px 14px;
-`;
+// const CardBtn = styled.button`
+//   background-color: #cccccc; /* серый цвет */
+//   border: none; /* убираем рамку */
+//   padding: 8px 16px; /* внутренние отступы */
+//   border-radius: 15px; /* чуть закруглённые углы */
+//   cursor: pointer; /* курсор при наведении */
+//   font-size: 14px; /* размер шрифта */
+//   background-color: var(--colors-ui-base);
+//   border: 0.1px solid white;
+//   color: white;
+//   margin: 10px 0px 10px 14px;
+// `;
 const CardGot = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
 export const Card = ({ logo, name, id, info = [] }) => {
+  // const dispatch = useDispatch();
+
+  // const handleRemove = () => {
+  //   dispatch(removeCard(id));
+  // };
   return (
     <Wrapper>
       <CardInfo>
@@ -83,7 +89,7 @@ export const Card = ({ logo, name, id, info = [] }) => {
         </CardBody>
       </CardInfo>
       <CardGot>
-        <CardBtn>Remove</CardBtn>
+        <RemoveBtn /*onRemove={handleRemove}*/ id={id}></RemoveBtn>
         <ToggleSwitch id={id} />
       </CardGot>
     </Wrapper>

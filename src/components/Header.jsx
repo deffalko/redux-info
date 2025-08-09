@@ -25,12 +25,12 @@ const Title = styled(Link).attrs({
   font-weight: var(--fw-bold);
 `;
 
-const ModeSwitcher = styled.div`
-  color: var(--colors-text);
-  font-size: var(--fs-sm);
-  cursor: pointer;
-  text-transform: capitalize;
-`;
+// const ModeSwitcher = styled.div`
+//   color: var(--colors-text);
+//   font-size: var(--fs-sm);
+//   cursor: pointer;
+//   text-transform: capitalize;
+// `;
 
 export const Header = () => {
   const cleanUp = useCleanUp();
@@ -39,7 +39,7 @@ export const Header = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title onClick={cleanUp}>Where is the world?</Title>
+          <Title onClick={cleanUp}>Info</Title>
           <ThemeSwitcher />
         </Wrapper>
       </Container>

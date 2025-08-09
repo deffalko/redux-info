@@ -69,7 +69,7 @@ const CountryList = () => {
               ],
             };
 
-            return <Card key={item.name} {...info} />;
+            return <Card key={item.id} {...info} />;
           })}
         </List>
       )}

@@ -112,7 +112,7 @@ const countrySlice = createSlice({
     });
   },
 });
-export const { toggleItem } = countrySlice.actions;
+export const { toggleItem, removeCard } = countrySlice.actions;
 export const countryReducer = countrySlice.reducer;
 
 export const selectCountriesInfo = (state) => ({
@@ -133,7 +133,11 @@ export const selectVisibleCountries = (
   state,
   { search = "", region = "", filterStatus = "" }
 ) => {
+  const removedIds = state.controls.remove;
   return state.countries.list.filter((item) => {
+    if (removedIds.includes(item.id)) {
+      return false; // исключить удалённые
+    }
     const matchesSearch = item.name
       .toLowerCase()
       .includes(search.toLowerCase());

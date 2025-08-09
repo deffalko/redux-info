@@ -25,7 +25,7 @@ const initialState = {
 };
 
 const toggleSlice = createSlice({
-  name: "toggle",
+  name: "@@toggle",
   initialState,
   reducers: {
     toggleItem: (state, action) => {

@@ -7,6 +7,7 @@ import { countryReducer } from "./features/countries/countries-slice";
 import { themeReducer } from "./features/theme/theme-slice";
 import { detailsReducer } from "./features/details/details-slice";
 import { toggleReducer } from "./features/toggle/toggle-slice";
+import { removeReducer } from "./features/remove/remove-slice";
 
 export const store = configureStore({
   reducer: {
@@ -15,6 +16,7 @@ export const store = configureStore({
     countries: countryReducer,
     toggle: toggleReducer,
     details: detailsReducer,
+    cards: removeReducer,
   },
   devTools: true,
   middleware: (getDefaultMiddleware) =>

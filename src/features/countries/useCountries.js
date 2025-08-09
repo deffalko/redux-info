@@ -18,6 +18,7 @@ export const useCountries = () => {
       search: controls.search,
       region: controls.region,
       filterStatus: controls.filterStatus,
+      remove: controls.remove,
     })
   );
   const { status, error, qty } = useSelector(selectCountriesInfo);
